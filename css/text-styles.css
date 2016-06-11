@@ -115,7 +115,7 @@ blockquote {
     padding: 0.5em 10px;
     quotes: "«" "»";
     color: #333;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 800;
 }
 
@@ -124,12 +124,14 @@ blockquote p {
 }
 
 blockquote cite {
-color: #5b5b5b;
+color: #a0a0a0;
 font-size: 14px;
 display: block;
 margin-top: 5px;
+font-weight: 400;
+
 }
  
 blockquote cite:before {
-content: "\2014 \2009";
+content: "\2014 \2009 ";
 }
