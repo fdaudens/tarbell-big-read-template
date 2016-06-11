@@ -7,7 +7,7 @@
     {% elif row.content_type  == "subhead" %}
         {{ build_subhead(row) }}   
     {% elif row.content_type  == "citation" %}
-        {{ build_quote(row) }}  
+        {{ build_citation(row) }}  
     {% elif row.content_type  == "citation_source" %}
         {{ build_citation_source(row) }}                   
     {% elif row.content_type  == "markup" %}
@@ -36,6 +36,15 @@
 {% endmacro %}
 
 
+{% macro build_subhead(citation_row, citation_source_row) %}
+<div class="row" {% if subhead_row.id %} id={{ subhead_row.id }} {% endif %}>
+    <div class="col-sm-7 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+        <blockquote>{{ citation_row.value }}</blockquote>
+          <p class="citation_source">{{ citation_source_row.value }}</p>
+    </div>
+</div>
+{% endmacro %}
+
 
 {% macro build_right_rail(right_rail_row, images) %}
   {% if right_rail_row.content_type == "text" %}
@@ -47,14 +56,7 @@
   {% endif %}
 {% endmacro %}
 
-{% macro build_subhead(citation_row, citation_source_row) %}
-<div class="row" {% if subhead_row.id %} id={{ subhead_row.id }} {% endif %}>
-    <div class="col-sm-7 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-        <blockquote>{{ citation_row.value }}</blockquote>
-          <p class="citation_source">{{ citation_source_row.value }}</p>
-    </div>
-</div>
-{% endmacro %}
+
 
 {% macro build_subhead(subhead_row) %}
 <div class="row" {% if subhead_row.id %} id={{ subhead_row.id }} {% endif %}>
