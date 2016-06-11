@@ -21,7 +21,7 @@ from tarbell.utils import ensure_directory
 
 from tarbell.app import TEMPLATE_TYPES
 
-NAME = "Devoir Template"
+NAME = "Le Devoir - Format magazine"
 
 EXCLUDES = [
     'LICENSE',
