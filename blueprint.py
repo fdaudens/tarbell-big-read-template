@@ -21,7 +21,7 @@ from tarbell.utils import ensure_directory
 
 from tarbell.app import TEMPLATE_TYPES
 
-NAME = "Big Read Builder"
+NAME = "Devoir Template"
 
 EXCLUDES = [
     'LICENSE',
