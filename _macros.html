@@ -58,13 +58,11 @@
 {% endmacro %}
 
 
-{% macro build_quote(quote_row, source_row) %}
+{% macro build_quote(quote_row) %}
 <div class="row" {% if quote_row.id %} id={{ quote_row.id }} {% endif %}>
     <div class="col-sm-7 col-sm-offset-1 col-xs-10 col-xs-offset-1">
         <blockquote>{{ quote_row.value }}
-        <div class="row" {% if source_row.id %} id={{ source_row.id }} {% endif %}>
-            <cite>{{ source_row.value }}</cite>
-        </div>
+            <cite {% if source_row.id %} id={{ source_row.id }} {% endif %}>{{ source_row.value }}</cite>
         </blockquote>
     </div>
 </div>
